@@ -1,0 +1,17 @@
+<?php 
+
+$hostname = "localhost";
+$username = "root";
+$password = "";
+$databasename = "ecommerce";
+
+$connect = mysqli_connect($hostname, $username, $password, $databasename);
+
+    $sql1 = "SELECT * FROM `category`";
+    $result1 = mysqli_query($connect, $sql1);
+    $option1 = "";
+    while($row1 = mysqli_fetch_array($result1)){
+        $option1 = $option1."<option>$row1[1]</option>";
+    }
+?>
+
